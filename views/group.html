@@ -1,0 +1,10 @@
+<html lang="en">
+{% extends 'layout.html' %} {% block content %}
+<p>ID: {{ user.id }}</p>
+<p>Spotify Profile:
+    <a href=" {{ user.profileUrl }}">{{ user.profileUrl }}</a>
+</p>
+<p>
+Your top genre is {{top_pick}}
+</p>
+{% endblock %}

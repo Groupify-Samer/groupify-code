@@ -1,0 +1,31 @@
+{% extends 'layout.html' %}
+{% block content %}
+{% if not user %}
+<p>
+	<head>
+		<link rel="stylesheet" type="text/css" href="css/op.css"/> 
+				<meta name="author" content="Matthew Lewicki">
+				<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+				<meta charset="UTF-8">
+				<script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+				<title>Spotify Login</title>
+	</head>
+			<body>
+				<section>
+			   <h1>Welcome to Groupify</h1>
+					<form method="get" name="loggin" action="/auth/spotify" id="loggin">
+						<fieldset>
+							<input type="submit" name='submit' value="Sign In" />
+						</fieldset>
+					</form>
+				</section>
+			</body>
+</p>
+{% else %}
+<p>
+</p>
+	<h2>Hello, {{ user.username }}.</h2>
+	<p>Your email is {{ user.emails[0].value }}</p>
+	<p>Your top genre is {{ test }}</p>
+{% endif %}
+{% endblock %}

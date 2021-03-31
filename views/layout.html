@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<title>Passport-Spotify</title>
+	<link rel="stylesheet" type="text/css" href="css/op.css"/> 
+</head>
+
+<body>
+	{% if not user %}
+	<p>
+		<a href="/" style="color:black">Home</a> |
+		<a href="/about" style="color:black">About</a> |
+		<a href="/contact" style="color:black">Contact</a>
+	</p>
+	{% else %}
+	<p>
+		<a href="/" style="color:black">Home</a> |
+		<a href="/about" style="color:black">About</a> |
+		<a href="/contact" style="color:black">Contact</a> |
+		<a href="/group" style="color:black">Group</a> |
+		<a href="/logout" style="color:black">Log Out</a>
+	</p>
+	{% endif %} {% block content %}{% endblock %}
+</body>
+
+</html>
