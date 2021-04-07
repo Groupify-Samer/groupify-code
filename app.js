@@ -150,8 +150,8 @@ app.get('/', function (req, res) {
 app.get('/group', ensureAuthenticated, function (req, res) {
   res.render('group.html', {user: req.user, top_pick: con.query("SELECT top_genre FROM user WHERE username='"+req.user.username+"'", function (err, result) {
     if (err){throw err;}
-    return result})});
-    console.log(top_pick)
+    return result})}
+    );
 });
 
 // GET /auth/spotify
